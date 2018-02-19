@@ -1,7 +1,7 @@
 #!/bin/bash
 mkdir $2
 mkdir "$2/copy"
-find /home -name "*.$1" -exec cp {} "$2/copy" \;
+find $HOME/ -name "*.$1" -exec cp {} "$2/copy" \;
 tar -cvf "$3.tar" "$2/copy"
 rm -r "$2/copy"
 mv ./tar.tar $2
